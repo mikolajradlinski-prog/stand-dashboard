@@ -169,7 +169,7 @@ export default function StandDashboard(){
     <div style={ui.page}>
       <div style={ui.wrap}>
         <div style={{...ui.headerRow, marginBottom: 12}}>
-          <h1 style={ui.h1}>Rejestr stoisk promocyjnych - {view==="week"?"widok tygodniowy":"widok miesięczny"}</h1>
+          <h1 style={ui.h1}>Centralny Rejestr Stoisk Promocyjnych - {view==="week"?"widok tygodniowy":"widok miesięczny"}</h1>
           <div style={ui.toolbar}>
             <button style={ui.btn} onClick={()=>navigate(-1)}>◀</button>
             <div style={{ fontSize:14, color:'#475569', minWidth:180, textAlign:'center' }}>{title}</div>
@@ -233,8 +233,8 @@ export default function StandDashboard(){
                           return (
                             <div key={b.id} style={ui.colBox}>
                               <div style={ui.colHeader}>
-                                <div style={{fontWeight:600, fontSize:14}}>{b.name}</div>
-                                <div style={{fontSize:12, color:'#475569'}}>pojemność: {b.capacity}</div>
+                                <div style={{fontWeight:600, fontSize:12}}>{b.name}</div>
+                                <div style={{fontSize:12, color:'#475569', fontSize:10}}>pojemność: {b.capacity}</div>
                               </div>
                               {blk.length>0 && (
                                 <div style={ui.blk}>
