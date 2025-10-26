@@ -168,7 +168,7 @@ export default function StandDashboard(){
   return (
     <div style={ui.page}>
       <div style={ui.wrap}>
-        <div style={ui.headerRow, marginBottom: 8}}>
+        <div style={{ui.headerRow, marginBottom: 8}}>
           <h1 style={ui.h1}>Rejestr stoisk — {view==="week"?"widok tygodniowy":"widok miesięczny"}</h1>
           <div style={ui.toolbar}>
             <button style={ui.btn} onClick={()=>navigate(-1)}>◀</button>
