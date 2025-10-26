@@ -169,7 +169,7 @@ export default function StandDashboard(){
     <div style={ui.page}>
       <div style={ui.wrap}>
         <div style={{...ui.headerRow, marginBottom: 12}}>
-          <h1 style={ui.h1}>Rejestr stoisk — {view==="week"?"widok tygodniowy":"widok miesięczny"}</h1>
+          <h1 style={ui.h1}>Rejestr stoisk promocyjnych - {view==="week"?"widok tygodniowy":"widok miesięczny"}</h1>
           <div style={ui.toolbar}>
             <button style={ui.btn} onClick={()=>navigate(-1)}>◀</button>
             <div style={{ fontSize:14, color:'#475569', minWidth:180, textAlign:'center' }}>{title}</div>
@@ -212,7 +212,7 @@ export default function StandDashboard(){
 
             {/* Legend */}
             <div style={ui.legendWrap}>
-              <span style={ui.chip}>Zwykła rezerwacja</span>
+              <span style={ui.chip}>Rezerwacja</span>
               <span style={{...ui.chip, background:'#fee2e2', border:'1px solid #fca5a5', color:'#7f1d1d'}}>Przekroczona pojemność</span>
               <span style={{...ui.chip, background:'#e5e7eb', border:'1px solid #cbd5e1', color:'#334155'}}>Blokada</span>
             </div>
@@ -233,7 +233,7 @@ export default function StandDashboard(){
                           return (
                             <div key={b.id} style={ui.colBox}>
                               <div style={ui.colHeader}>
-                                <div style={{fontWeight:600}}>{b.name}</div>
+                                <div style={{fontWeight:600, fontSize:14}}>{b.name}</div>
                                 <div style={{fontSize:12, color:'#475569'}}>pojemność: {b.capacity}</div>
                               </div>
                               {blk.length>0 && (
