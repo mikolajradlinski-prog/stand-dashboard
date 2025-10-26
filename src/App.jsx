@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 // ✅ Ten wariant NIE wymaga Tailwinda ani żadnych styli globalnych.
-// Wszystko jest ostylowane inline, więc nie będzie już "brzydko" jak na screenie.
+// Wszystko jest ostylowane inline, więc nie będzie już "brzydko" jak na screenie
 
 // === KONFIGURACJA ===
 // Podmień na URL Web Appa z Google Apps Script
@@ -56,7 +56,7 @@ const ui = {
   btn: { padding:'10px 14px', border:'1px solid #e2e8f0', borderRadius:13, background:'#fff', cursor:'pointer', fontSize:14 },
   select: { padding:'10px 12px', border:'1px solid #e2e8f0', borderRadius:12, background:'#fff', fontSize:14 },
   legendWrap: { display:'flex', gap:20, marginTop:14, marginBottom:16 },
-  chip: { padding:'5px 8px', border:'1px solid #e5e7eb', borderRadius:10, background:'#fff', lineHeight:1.0, fontSize:10 },
+  chip: { padding:'5px 8px', border:'1px solid #e5e7eb', borderRadius:10, background:'#fff', lineHeight:1.0, fontSize:12 },
   card: { background:'#fff', borderRadius:16, boxShadow:'0 1px 3px rgba(0,0,0,.08)', padding:16 },
   colHeader: { display:'flex', justifyContent:'space-between', alignItems:'center', padding:'8px 12px', borderBottom:'1px solid #e2e8f0', background:'#f8fafc', borderTopLeftRadius:12, borderTopRightRadius:12 },
   colBox: { border:'1px solid #e2e8f0', borderRadius:12 },
