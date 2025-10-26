@@ -50,13 +50,13 @@ function startOfISOWeek(d){const x=new Date(d); const off=(x.getDay()+6)%7; x.se
 const ui = {
   page: { minHeight:'100vh', background:'#f1f5f9', padding:'24px', fontFamily:'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif', color:'#0f172a' },
   wrap: { maxWidth:1120, margin:'0 auto' },
-  headerRow: { display:'flex', flexWrap:'wrap', alignItems:'center', justifyContent:'space-between', gap:8 },
+  headerRow: { display:'flex', flexWrap:'wrap', alignItems:'center', justifyContent:'space-between', gap:18 },
   h1: { fontSize:28, fontWeight:800, margin:0 },
-  toolbar:   { display:'flex', flexWrap:'wrap', alignItems:'center', gap:8 },
-  btn: { padding:'8px 12px', border:'1px solid #e2e8f0', borderRadius:10, background:'#fff', cursor:'pointer' },
-  select: { padding:'8px 12px', border:'1px solid #e2e8f0', borderRadius:10, background:'#fff' },
-  legendWrap:{ display:'flex', gap:16, fontSize:7 },
-  chip: { padding:'4px 8px', border:'1px solid #e5e7eb', borderRadius:8, background:'#fff' },
+  toolbar: { display:'flex', flexWrap:'wrap', alignItems:'center', gap:18 },
+  btn: { padding:'10px 14px', border:'1px solid #e2e8f0', borderRadius:12, background:'#fff', cursor:'pointer', fontSize:16 },
+  select: { padding:'10px 14px', border:'1px solid #e2e8f0', borderRadius:12, background:'#fff', fontSize:16 },
+  legendWrap: { display:'flex', gap:20, fontSize:16, marginTop:12 },
+  chip: { padding:'6px 12px', border:'1px solid #e5e7eb', borderRadius:12, background:'#fff', lineHeight:1.2 },
   card: { background:'#fff', borderRadius:16, boxShadow:'0 1px 3px rgba(0,0,0,.08)', padding:16 },
   colHeader: { display:'flex', justifyContent:'space-between', alignItems:'center', padding:'8px 12px', borderBottom:'1px solid #e2e8f0', background:'#f8fafc', borderTopLeftRadius:12, borderTopRightRadius:12 },
   colBox: { border:'1px solid #e2e8f0', borderRadius:12 },
@@ -168,7 +168,7 @@ export default function StandDashboard(){
   return (
     <div style={ui.page}>
       <div style={ui.wrap}>
-        <div style={{...ui.headerRow, marginBottom: 8}}>
+        <div style={{...ui.headerRow, marginBottom: 12}}>
           <h1 style={ui.h1}>Rejestr stoisk — {view==="week"?"widok tygodniowy":"widok miesięczny"}</h1>
           <div style={ui.toolbar}>
             <button style={ui.btn} onClick={()=>navigate(-1)}>◀</button>
