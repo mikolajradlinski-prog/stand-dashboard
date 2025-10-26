@@ -89,7 +89,7 @@ export default function App() {
       <div style={{maxWidth: '1120px', margin: '0 auto'}}>
         <header style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'16px'}}>
           <div>
-            <h1 style={{fontSize:'24px',fontWeight:700,margin:0}}>Rejestr stoisk — widok tygodniowy</h1>
+            <h1 style={{fontSize:'24px',fontWeight:700,margin:0}}>Rejestr stoisk promocyjnych — widok tygodniowy</h1>
             <p style={{fontSize:'14px',color:'#475569',margin:'4px 0 0'}}>Dane wczytywane z Google Sheet/Airtable → JSON.</p>
           </div>
           <div style={{fontSize:'14px',color:'#475569'}}>
@@ -162,7 +162,7 @@ export default function App() {
         <div style={{marginTop:'16px',fontSize:'14px',color:'#475569'}}>
           <p style={{margin:'8px 0',fontWeight:600}}>Wdrożenie:</p>
           <ol style={{margin:'0 0 8px 18px'}}>
-            <li>Własność Samorządu Studentów Uniwersytetu Ekonomicznego we Wrocławiu ®2025(G</li>
+            <li>Własność Samorządu Studentów Uniwersytetu Ekonomicznego we Wrocławiu ®2025</li>
             <li>Zbuduj: <code>npm run build</code> i wrzuć /dist na Netlify lub podepnij repo do Vercela.</li>
           </ol>
         </div>
