@@ -162,7 +162,7 @@ export default function App() {
         <div style={{marginTop:'16px',fontSize:'14px',color:'#475569'}}>
           <p style={{margin:'8px 0',fontWeight:600}}>Wdrożenie:</p>
           <ol style={{margin:'0 0 8px 18px'}}>
-            <li>Własność Samorządu Studentów Uniwersytetu Ekonomicznego we Wrocławiu ®2025</li>
+            <br>Własność Samorządu Studentów Uniwersytetu Ekonomicznego we Wrocławiu ®2025</ber>
             <li>Zbuduj: <code>npm run build</code> i wrzuć /dist na Netlify lub podepnij repo do Vercela.</li>
           </ol>
         </div>
