@@ -213,7 +213,6 @@ export default function StandDashboard(){
             {/* Legend */}
             <div style={ui.legendWrap}>
               <span style={ui.chip}>Rezerwacja</span>
-              <span style={{...ui.chip, background:'#fee2e2', border:'1px solid #fca5a5', color:'#7f1d1d'}}>Przekroczona pojemność</span>
               <span style={{...ui.chip, background:'#e5e7eb', border:'1px solid #cbd5e1', color:'#334155'}}>Blokada</span>
             </div>
 
@@ -234,7 +233,7 @@ export default function StandDashboard(){
                             <div key={b.id} style={ui.colBox}>
                               <div style={ui.colHeader}>
                                 <div style={{fontWeight:600, fontSize:12}}>{b.name}</div>
-                                <div style={{fontSize:12, color:'#475569', fontSize:10}}>pojemność: {b.capacity}</div>
+                                <div style={{fontSize:12, color:'#475569', fontSize:10}}>limit stoisk: {b.capacity}</div>
                               </div>
                               {blk.length>0 && (
                                 <div style={ui.blk}>
@@ -319,7 +318,7 @@ export default function StandDashboard(){
                         <div key={k} style={{border:'1px solid #e2e8f0', borderRadius:12}}>
                           <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', padding:'8px 12px', background:'#f8fafc', borderTopLeftRadius:12, borderTopRightRadius:12}}>
                             <div style={{fontWeight:600}}>{b?`${b.id} — ${b.name}`:k}</div>
-                            <div style={{fontSize:12, color:'#475569'}}>pojemność: {b?.capacity ?? '-'}</div>
+                            <div style={{fontSize:12, color:'#475569'}}>limit stoisk: {b?.capacity ?? '-'}</div>
                           </div>
                           <div style={{padding:12, display:'flex', flexDirection:'column', gap:8}}>
                             {groups[k].map(item=>{ const c=badgeColor(item); return (
