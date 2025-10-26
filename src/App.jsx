@@ -42,7 +42,19 @@ const PL = {
 
 function timeToMinutes(t){ if(!t) return 0; const [h,m]=String(t).split(":").map(Number); return h*60+(m||0);} 
 function overlaps(aStart,aEnd,bStart,bEnd){return timeToMinutes(aStart)<timeToMinutes(bEnd)&&timeToMinutes(aEnd)>timeToMinutes(bStart);} 
-function toISO(d){return d.toISOString().slice(0,10);} 
+// ISO bez UTC — liczone lokalnie, żeby nie przesuwało dnia względem PL
+function toISO(d){
+  const y = d.getFullYear();
+  const m = String(d.getMonth()+1).padStart(2,'0');
+  const day = String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+
+// Parser YYYY-MM-DD też lokalnie (nie używa UTC)
+function parseYMD(s){
+  const [y,m,d] = String(s).split('-').map(Number);
+  return new Date(y || 1970, (m||1)-1, d||1);
+}
 function fmtDayPL(d){return d.toLocaleDateString("pl-PL",{day:"2-digit",month:"2-digit"});}
 function startOfISOWeek(d){const x=new Date(d); const off=(x.getDay()+6)%7; x.setHours(0,0,0,0); x.setDate(x.getDate()-off); return x;}
 
@@ -306,7 +318,7 @@ export default function StandDashboard(){
           <div onClick={closeModal} style={{position:'fixed', inset:0, background:'rgba(0,0,0,.4)', display:'flex', alignItems:'center', justifyContent:'center', padding:16, zIndex:50}}>
             <div onClick={(e)=>e.stopPropagation()} style={{background:'#fff', borderRadius:16, boxShadow:'0 8px 24px rgba(0,0,0,.2)', maxWidth:720, width:'100%', padding:16}}>
               <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8}}>
-                <div style={{fontSize:18, fontWeight:600}}>Szczegóły — {new Date(modalDay).toLocaleDateString("pl-PL",{weekday:"long", day:"2-digit", month:"2-digit", year:"numeric"})}</div>
+                <div style={{fontSize:18, fontWeight:600}}>Szczegóły — {parseYMD(modalDay).toLocaleDateString("pl-PL",{weekday:"long", day:"2-digit", month:"2-digit", year:"numeric"})}</div>
                 <button style={ui.btn} onClick={closeModal}>Zamknij</button>
               </div>
               {(()=>{ const groups = itemsForModal(modalDay); const keys = Object.keys(groups).sort();
