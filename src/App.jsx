@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 // === KONFIGURACJA ===
 // Podmień na URL Web Appa z Google Apps Script (krok 2 z instrukcji)
-const DATA_URL = "https://script.google.com/macros/s/AKfycbyLFleiGx-Zw3ITm5Vxg1IgDoMmWAcxWi8tWhWri7lSzciVKuKyn5NGrT12crcWMH-c/exec";
+const DATA_URL = "https://script.google.com/macros/s/AKfycbwvibZlccv52NmXEKbx5WqY_svc3LFU0KzDZIs1o4PnNKYQGC1WSAya21L2P0kAseKk/exec";
 
 export default function App() {
   const [data, setData] = useState(null); // { buildings: [], blackouts: [], bookings: [] }
