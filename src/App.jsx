@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 // === KONFIGURACJA ===
 // Podmień na URL Web Appa z Google Apps Script (krok 2 z instrukcji)
-const DATA_URL = "https://example.com/gs/stands-json";
+const DATA_URL = "https://script.google.com/macros/s/AKfycbyLFleiGx-Zw3ITm5Vxg1IgDoMmWAcxWi8tWhWri7lSzciVKuKyn5NGrT12crcWMH-c/exec";
 
 export default function App() {
   const [data, setData] = useState(null); // { buildings: [], blackouts: [], bookings: [] }
