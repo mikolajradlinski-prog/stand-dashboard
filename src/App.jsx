@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch(DATA_URL, { cache: "no-store" });
+        const res = await fetch(`${DATA_URL}?ts=${Date.now()}`, { cache: "no-store" });
         if (!res.ok) throw new Error("Błąd pobierania: " + res.status);
         const json = await res.json();
         setData(json);
