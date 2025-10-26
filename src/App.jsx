@@ -215,7 +215,6 @@ export default function StandDashboard(){
               <span style={ui.chip}>Zwykła rezerwacja</span>
               <span style={{...ui.chip, background:'#fee2e2', border:'1px solid #fca5a5', color:'#7f1d1d'}}>Przekroczona pojemność</span>
               <span style={{...ui.chip, background:'#e5e7eb', border:'1px solid #cbd5e1', color:'#334155'}}>Blokada</span>
-              <div style={{ height: 12 }} />
             </div>
 
             {view==="week" && (
@@ -263,7 +262,7 @@ export default function StandDashboard(){
             )}
 
             {view==="month" && (
-              <div style={ui.card}>
+              <div style={{ ...ui.card, marginTop: 16 }}>
                 <div style={{...ui.grid7, padding:'0 4px', fontSize:12, fontWeight:600, color:'#64748b'}}>
                   {PL.weekdaysShort.map(w=> (<div key={w} style={{textAlign:'center'}}>{w}</div>))}
                 </div>
